@@ -53,13 +53,17 @@
             moveBackgroundPiece(id);});
     }
 
-    moveBackgroundPiece("cliff");
-    setTimeout(function() {
-        moveBackgroundPiece("clouds");
-    setTimeout(function() {
-        moveBackgroundPiece("hill");
-    }, 500)
-    }, 500);
+    $(document).ready(function () {
+
+        moveBackgroundPiece("cliff");
+        setTimeout(function () {
+            moveBackgroundPiece("clouds");
+            setTimeout(function () {
+                moveBackgroundPiece("hill");
+            }, 500)
+        }, 500);
+        
+    });
     
 </script>
 
