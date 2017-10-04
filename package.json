@@ -1,0 +1,28 @@
+{
+  "name": "website2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify js/script.js -o bundle.js",
+    "serve": "http-server -p 1234"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "browserify": "^14.4.0",
+    "browserify-fs": "^1.0.0",
+    "fs": "0.0.1-security",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
+    "scrollmagic": "^2.0.5",
+    "tsc": "^1.20150623.0",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.2.12",
+    "ts-loader": "^2.3.7"
+  }
+}

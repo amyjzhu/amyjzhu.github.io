@@ -1,0 +1,15 @@
+
+I'm Amy!
+
+I've always wanted a nickname but unfortunately it doesn't get any shorter than this.
+
+In terms of CS, I'm interested in a variety of things -- still traversing that well-paved road of higher education.
+But I have a lot of experience in CS education and software practices.
+
+I've got grips on Java and Javascript mainly, a forgotten semester each of C and C++. And an obscure subset of Lisp called Racket.
+
+LaTeX, bash, ...
+
+Statistics, math and CS.
+
+

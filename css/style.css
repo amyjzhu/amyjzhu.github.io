@@ -1,0 +1,123 @@
+body {
+    height: 100%;
+    background-image: url("../assets/background/background.png");
+    width:100%;
+    z-index:0;
+    position:relative;
+    overflow:hidden;
+    font-family: 'Abril Fatface';
+}
+
+.floater-box {
+    height: 100vh;
+    display: block;
+    position: relative;
+    z-index: 30;
+    overflow-y:scroll;
+
+}
+
+#blur-box {
+    background-color:white;
+    opacity:0.65;
+    position: relative;
+    z-index: 31;
+}
+
+#nav-menu {
+    width:100%;
+    position:absolute;
+
+}
+
+.container {
+}
+
+.anchor:before {
+    display: block;
+    content: " ";
+    margin-top: -75px;
+    height: 75px;
+    visibility: hidden;
+}
+
+#content-box {
+    font-family: 'Quicksand', sans-serif;
+    z-index:35;
+    border: 2px white solid;
+    padding-top:10px;
+    padding-right:30px;
+    padding-left:30px;
+    padding-bottom:30px;
+}
+
+#content-border {
+    position:relative;
+    z-index:33;
+    height:600px;
+}
+
+.header-padding {
+    height: 60px;
+}
+
+.background-piece {
+    height:auto;
+    max-height:400px;
+    bottom:-50px;
+    position:absolute;
+    width:130%;
+    display:block;
+    background-size:contain
+}
+
+#cliff {
+    z-index:6;
+    bottom:-950px;
+    left:-200px;
+}
+
+#pool {
+    z-index:7;
+    max-height:600px;
+    max-width:800px;
+    width:auto;
+    bottom:-1050px;
+    left:0px;
+}
+
+#clouds {
+    z-index:5;
+    bottom:-860px;
+    left: 300px;
+}
+
+#hill {
+    z-index:8;
+    bottom:-1050px;
+    left:400px;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+section {
+    min-height: 110vh;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
