@@ -6,6 +6,7 @@ body {
     position:relative;
     overflow:hidden;
     font-family: 'Abril Fatface';
+    padding:0;
 }
 
 .floater-box {
@@ -24,13 +25,9 @@ body {
     z-index: 31;
 }
 
-#nav-menu {
-    width:100%;
-    position:absolute;
 
-}
-
-.container {
+#moving-pieces {
+    position:fixed;
 }
 
 .anchor:before {
@@ -98,15 +95,6 @@ body {
     left:400px;
 }
 
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-}
-
-.navbar .navbar-collapse {
-    text-align: center;
-}
 
 section {
     min-height: 110vh;
@@ -120,4 +108,41 @@ section {
 /* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
+}
+
+
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+ul li {
+    display:inline-block;
+}
+
+.navbar {
+    text-align: center;
+}
+
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+
+#nav-menu {
+    position:fixed;
+
+}
+
+#carouselMyStuff {
+    height:60vh;
+    width:auto;
 }
