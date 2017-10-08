@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Lily+Script+One" rel="stylesheet">
+
 
 
 <!--favicon-->
@@ -76,7 +78,16 @@
         );
 
     });
-    
+
+    function scrollToAbout() {
+        // get
+        $('floater-box').animate({
+            scrollTop: $("#about-content").position().top + $("#sections").scrollTop()
+        }, 2000);
+
+    }
+
+
 </script>
 
 </head>
@@ -113,47 +124,57 @@
                 <div class="header-padding"></div>
                 <div id="content-box">NOTHING works
 
-                <div class="sections">
+                <div id="sections">
                     <section id="home-content" class="anchor">
 
 
                         <br/><br/><br/><br/><br/>
-                        <span style="font-family:Kaushan Script, cursive; font-size:40px; line-height:70%">hello stranger, how was the trip?</span><br/>
-                        <span style="font-family:Abril Fatface; font-size:40px; line-height: 50%">well, you've arrived.</span><br/><br/><br/><br/><br/><br/><br/><br/>
+                        <span style="font-family:'Petit Formal Script', cursive; font-weight: bold; font-size:35px; line-height:70%">hello stranger, how was the trip?</span><br/>
+                        <span style="font-family:Abril Fatface; font-size:40px; line-height: 50%">I hope you find what you're looking for.</span><br/><br/><br/><br/><br/><br/><br/><br/>
 
-                        (hope it isn't underwhelming)
+                        <button onclick="scrollToAbout();">(tell me if it's underwhelming)</button>
                     </section>
 
                     <section id="about-content" class="anchor">
 
                         <p>I'm Amy!</p>
 
-                        <p>I've always wanted a nickname but unfortunately it doesn't get any shorter than this.</p>
+                        <p>I've always wanted a nickname but unfortunately it doesn't get any shorter.</p>
 
                         <p>In terms of CS, I'm interested in a variety of things -- still traversing that well-paved road of higher education.
                             <br/>But I have a lot of experience in CS education and software practices. </p>
 
                         <p> I've got grips on Java and Javascript mainly, a forgotten semester each of C and C++. And an obscure subset of Lisp called Racket.</p>
 
-                        <p> LaTeX, bash, ...</p>
+                        <p> LaTeX, bash, git, R, MatLab (dubious).</p>
 
-                        <p>Statistics, math and CS.</p>
-
-                    </section>
-
-
-                    <section id="contact-content"class="anchor"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    GitHub, Ravelry, LinkedIn, resume
+                        <p>Whe...</p>
 
                     </section>
 
 
+                    <section id="contact-content"class="anchor">
+                        I know reaching out first is pretty hard, but I assure you, every email is a delight. I check that thing every twenty minutes
+                        (if only to verify that my Amazon purchase has shipped).
+
+                        <div id="icons bar">
+                            <a href="https://www.linkedin.com/in/amy-zhu-54403511b/"><img height="32px" id="linkedin" src="assets/icons/linkedin.png"></a>
+                            <a href="https://www.github.com/amyjzhu"><img id="github" src="assets/icons/github.png"></a>
+
+                        </div>
+                        GitHub, Ravelry, LinkedIn, resume, email
+
+
+
+                    </section>
 
 
 
 
 
-                    <section id="hobbies-content"class="anchor">Oh wow there's more!<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+                    <section id="hobbies-content"class="anchor">And here's the part of the website that I personally care most about: my hobbies.<br/><br/><br/><br/><br/><br/><br/><br/>
 
                         <!-- carousel -->
 

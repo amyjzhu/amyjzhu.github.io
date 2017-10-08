@@ -5,7 +5,7 @@ body {
     z-index:0;
     position:relative;
     overflow:hidden;
-    font-family: 'Abril Fatface';
+    font-family: 'Quicksand';
     padding:0;
 }
 
@@ -46,6 +46,8 @@ body {
     padding-right:30px;
     padding-left:30px;
     padding-bottom:30px;
+    overflow-x:hidden;
+    overflow-y:scroll;
 }
 
 #content-border {
