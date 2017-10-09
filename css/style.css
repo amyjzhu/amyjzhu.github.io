@@ -107,11 +107,6 @@ section {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
-
 
 
 .navbar .navbar-nav {
@@ -145,7 +140,7 @@ ul li {
 }
 
 #carouselMyStuff {
-    height:60vh;
+    height:auto;
     width:auto;
 }
 
@@ -157,6 +152,17 @@ tr.spaceUnder>td {
     padding-bottom: 1em;
 }
 
+
+#hobbies-grid {
+    position:relative;
+}
+
 .hobbies-grid {
 
+}
+
+#landing-button {
+    position:absolute;
+    right:15%;
+    font-size:20px;
 }
