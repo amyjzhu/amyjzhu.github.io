@@ -124,6 +124,14 @@ ul li {
     display:inline-block;
 }
 
+#hobbies-reading-content ul li {
+display:block;
+}
+
+table ul li {
+    display:block;
+}
+
 .navbar {
     text-align: center;
 }
