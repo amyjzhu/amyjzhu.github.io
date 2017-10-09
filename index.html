@@ -15,7 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Vibur|Kaushan+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Delius|Courgette|Bad+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Lily+Script+One" rel="stylesheet">
@@ -141,15 +141,19 @@
 
                             <span style="line-height: 90vh"></span>
                             <div  style="vertical-align:middle; display:inline-block">
-                            <span style="font-family:'Petit Formal Script', cursive; font-weight: bold; font-size:35px; line-height:70%">hello stranger, how was the trip?</span><br/>
-                            <span style="font-family:Abril Fatface; font-size:40px; line-height: 50%">I hope you find what you're looking for.</span><br/><br/><br/>
+                                <!--<span style="font-family:'Petit Formal Script', cursive; font-weight: bold; font-size:35px; line-height:70%">  hello stranger, how was the trip?</span><br/>
+                                <span style="font-family:Abril Fatface; font-size:40px; line-height: 50%">I hope you find what you're looking for.</span><br/><br/><br/>-->
+                                <span style="font-family:'Bad Script', cursive; font-weight: bold; font-size:35px; line-height:70%">  hello stranger, how was the trip?</span><br/>
+                                <span style="font-size:40px; line-height: 50%; font-weight:bold">Hopefully you find what you're looking for.</span><br/><br/><br/>
 
                                 <div style="text-align:center">
-                            <button id="landing-button" class="btn btn-outline-dark btn-large">let me know if it's underwhelming ></button></div>
+                                    <button id="landing-button" class="btn btn-outline-dark btn-large">let me know if it's underwhelming ></button></div>
                             </div>
                         </section>
 
                         <section id="about-content" class="anchor">
+
+                            <p><h2>nice to meet you</h2></p>
 
                             <p>I'm Amy!</p>
 
@@ -162,7 +166,36 @@
 
                             <p> LaTeX, bash, git, R, MatLab (dubious).</p>
 
-                            <p>Whe...</p>
+                            <br><br>
+                            <p><h2>work experience</h2></p>
+
+                            <div>
+                                <table width="100%" style="text-align:left">
+                                    <tr>
+                                        <td>Software Engineering Intern</td>
+                                        <td>Fusemail</td>
+                                        <td style="text-align:right" colspan="2">September 2017 - present</td>
+                                    </tr>
+                                    <tr class="spaceUnder">
+                                        <td>&nbsp;</td>
+                                        <td colspan="3">Worked on blah blah</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>Undergraduate Research Assistant</td>
+                                        <td>UBC Extended Learning</td>
+                                        <td style="text-align:right" colspan="2">May 2017 - August 2017</td>
+                                    </tr>
+                                    <tr class="spaceUnder">
+                                        <td>&nbsp;</td>
+                                        <td colspan="3">Worked on blah blah</td>
+                                    </tr>
+
+                                </table>
+
+
+                            </div>
 
                         </section>
 
@@ -171,6 +204,7 @@
                             I know reaching out first is pretty hard, but I assure you, every email is a delight. I check that thing every twenty minutes
                             (if only to verify that my Amazon purchase has shipped).
 
+                            <br><br>
                             <div id="icons bar">
                                 <a href="https://www.linkedin.com/in/amy-zhu-54403511b/"><img height="32px" id="linkedin" src="assets/icons/linkedin.png"></a>
                                 <a href="https://www.github.com/amyjzhu"><img id="github" src="assets/icons/github.png"></a>
@@ -201,21 +235,21 @@
                                 </ol>
                                 <div class="carousel-inner" role="listbox">
                                     <div class="item active">
-                                        <img class="d-block img-fluid" src="assets/keeb.JPG" alt="MyKeeb">
+                                        <img class="d-block img-fluid carousel-img" src="assets/keeb.JPG" alt="MyKeeb">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>keeb</h3>
                                             <p>filco majestouch 2 tkl | cherry mx blues </p>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img class="d-block img-fluid" src="assets/food_party.png" alt="Second slide">
+                                        <img class="d-block img-fluid carousel-img" src="assets/food_party.png" alt="Second slide">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>food</h3>
                                             <p>many assorted cold noodle accoutrements</p>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img class="d-block img-fluid" src="assets/cake.JPG" alt="Third slide">
+                                        <img class="d-block img-fluid carousel-img" src="assets/cake.JPG" alt="Third slide">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>perfume</h3>
                                             <p>red wine olive oil bundt | apple blossom </p>
@@ -234,7 +268,78 @@
 
                             <!-- carousel end-->
 
+
+                            <!-- grid start -->
+
+<!--                            <div class="row">
+
+                                <div class=".col-6 .col-sm-3">
+                                    <div class="panel panel-info hobbies-grid" id="reading">
+                                        <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-reading-content"
+                                             aria-expanded="false" aria-controls="hobbies-reading-content">Reading</div>
+                                        <div class="panel-body collapse" id="hobbies-reading-content">Panel Content</div>
+                                    </div>
+                                </div>
+
+                                <div class=".col-6 .col-sm-3">
+                                    <div class="panel panel-info hobbies-grid" id="baking">
+                                        <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-baking-content"
+                                             aria-expanded="false" aria-controls="hobbies-baking-content">Baking</div>
+                                        <div class="panel-body collapse" id="hobbies-baking-content">Panel Content</div>
+                                    </div>
+                                </div>
+
+                                <div class=".col-6 .col-sm-3">
+                                    <div class="panel panel-info hobbies-grid" id="drawing">
+                                        <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-drawing-content"
+                                             aria-expanded="false" aria-controls="hobbies-drawing-content">Drawing</div>
+                                        <div class="panel-body collapse" id="hobbies-drawing-content">Panel Content</div>
+                                    </div>
+                                </div>
+
+
+                            </div> -->
+
+                            <!-- grid end-->
+
+
+
+                            <div class="container-fluid">
+                            <div class="row">
+
+                                <div class=".col-6 .col-md-4">
+                                    <div class="hobbies-grid" id="reading">
+                                        <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-reading-content"
+                                             aria-expanded="false" aria-controls="hobbies-reading-content">Reading</div>
+                                        <div class="panel-body collapse" id="hobbies-reading-content">Panel Content</div>
+                                    </div>
+                                </div>
+
+                                <div class=".col-6 .col-md-4">
+                                    <div class="hobbies-grid" id="baking">
+                                        <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-baking-content"
+                                             aria-expanded="false" aria-controls="hobbies-baking-content">Baking</div>
+                                        <div class="panel-body collapse" id="hobbies-baking-content">Panel Content</div>
+                                    </div>
+                                </div>
+
+                                <div class=".col-6 .col-md-4">
+                                    <div class="hobbies-grid" id="drawing">
+                                        <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-drawing-content"
+                                             aria-expanded="false" aria-controls="hobbies-drawing-content">Drawing</div>
+                                        <div class="panel-body collapse" id="hobbies-drawing-content">Panel Content</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            </div>
+
+
+
                             <br><br><br>
+
+
 
 
                         </section>

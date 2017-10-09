@@ -148,3 +148,15 @@ ul li {
     height:60vh;
     width:auto;
 }
+
+.carousel-img {
+    opacity: 1;
+}
+
+tr.spaceUnder>td {
+    padding-bottom: 1em;
+}
+
+.hobbies-grid {
+
+}
