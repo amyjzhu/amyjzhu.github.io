@@ -22,73 +22,85 @@
 
 
 
-<!--favicon-->
+    <!--favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/manifest.json">
     <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
-<script>
+    <script>
 
-    var maxYMotionPx = 35;
-    var maxXMotionPx = 50;
-    var animationSpeed = 1800;
+        var maxYMotionPx = 35;
+        var maxXMotionPx = 50;
+        var animationSpeed = 1800;
 
-    function makeNewPosition() {
+        function makeNewPosition() {
 
-        var xRand = Math.random() - 0.5;
-        var yRand = Math.random() - 0.5;
+            var xRand = Math.random() - 0.5;
+            var yRand = Math.random() - 0.5;
 
-        return {x: maxXMotionPx * xRand, y: maxYMotionPx * yRand };
+            return {x: maxXMotionPx * xRand, y: maxYMotionPx * yRand };
 
-    }
+        }
 
-    function moveBackgroundPiece(id) {
-        var element= "#" + id;
-        var newCoords = makeNewPosition();
-        var originalCoords = {x: parseFloat($(element).css("left")), y: parseFloat($(element).css("bottom"))};
+        function moveBackgroundPiece(id) {
+            var element= "#" + id;
+            var newCoords = makeNewPosition();
+            var originalCoords = {x: parseFloat($(element).css("left")), y: parseFloat($(element).css("bottom"))};
 
-        var newBottom = originalCoords['y'] + newCoords['y'];
-        var newLeft = originalCoords['x'] + newCoords['x'];
+            var newBottom = originalCoords['y'] + newCoords['y'];
+            var newLeft = originalCoords['x'] + newCoords['x'];
 
-        $(element).delay(900).animate({bottom: newBottom, left: newLeft}, animationSpeed, function () {
-            returnToOriginal(originalCoords, id);
-        });
-    }
+            $(element).delay(900).animate({bottom: newBottom, left: newLeft}, animationSpeed, function () {
+                returnToOriginal(originalCoords, id);
+            });
+        }
 
-    function returnToOriginal(originalCoords, id) {
-        var element = "#" + id;
-        $(element).animate({bottom: originalCoords['y'], left: originalCoords['x']}, animationSpeed, function () {
-            moveBackgroundPiece(id);});
-    }
+        function returnToOriginal(originalCoords, id) {
+            var element = "#" + id;
+            $(element).animate({bottom: originalCoords['y'], left: originalCoords['x']}, animationSpeed, function () {
+                moveBackgroundPiece(id);});
+        }
 
-    $(document).ready(function () {
+        $(document).ready(function () {
 
-        moveBackgroundPiece("cliff");
-        setTimeout(function () {
-            moveBackgroundPiece("clouds");
+            moveBackgroundPiece("cliff");
             setTimeout(function () {
-                moveBackgroundPiece("hill");
-            }, 500)
-        }, 500);
+                moveBackgroundPiece("clouds");
+                setTimeout(function () {
+                    moveBackgroundPiece("hill");
+                }, 500)
+            }, 500);
 
-        $('.carousel').carousel(
-        // { interval: 2000 }
-        );
+            $('.carousel').carousel(
+                // { interval: 2000 }
+            );
 
-    });
+            assignScrollHandlers();
 
-    function scrollToAbout() {
-        // get
-        $('floater-box').animate({
-            scrollTop: $("#about-content").position().top + $("#sections").scrollTop()
-        }, 2000);
+        });
 
-    }
+        function assignScrollHandlers() {
+
+            $("#landing-button").click(() => { scrollTo( "about-content") });
+            $("#home").click(() => {scrollTo("home-content")});
+            $("#about").click(() => { scrollTo("about-content")});
+            $("#hobbies").click(() => { scrollTo("hobbies-content")});
+            $("#contact").click(() => { scrollTo("contact-content") });
+        }
 
 
-</script>
+        function scrollTo(item) {
+            var topPos = document.getElementById(item).offsetTop;
+            $("#floater-box").animate({
+                scrollTop: topPos-10
+            }, 800);
+        }
+
+
+
+    </script>
 
 </head>
 <body>
@@ -97,19 +109,19 @@
 
 <nav id="nav-menu" class="navbar navbar-toggleable-md navbar-static-top"> <!--fixed-top-->
     <div class="container navbar-inner">
-       <!-- <nav class="navbar navbar-default navbar-inner">
-            <div class="container-fluid"> -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Hey!</a>
-                </div>
-                <ul class="nav nav-pills" data-toggle="tabs">
-                    <li class="active"><a href="#home-content">Home</a></li>
-                    <li id="about"><a href="#about-content">About</a></li>
-                    <li id="contact"><a href="#contact-content">Contact</a></li>
-                    <li id="hobbies"><a href="#hobbies-content" class="anchor">Interests</a></li> <!--disable defaults if scrolling to preserve spy?-->
-                </ul>
-            <!--</div>
-        </nav>-->
+        <!-- <nav class="navbar navbar-default navbar-inner">
+             <div class="container-fluid"> -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">me</a>
+        </div>
+        <ul class="nav nav-pills" data-toggle="tabs">
+            <li id="home" class="active"><a href="#home-content">Home</a></li>
+            <li id="about"><a href="#about-content">About</a></li>
+            <li id="contact"><a href="#contact-content">Contact</a></li>
+            <li id="hobbies"><a href="#hobbies-content" class="anchor">Interests</a></li> <!--disable defaults if scrolling to preserve spy?-->
+        </ul>
+        <!--</div>
+    </nav>-->
     </div>
 </nav>
 
@@ -119,113 +131,115 @@
     <!---->
 
     <div id="blur-box">
-        <div class="floater-box" data-spy="scroll" data-target=".navbar" data-offset="50">
+        <div class="floater-box" id="floater-box" data-spy="scroll" data-target=".navbar" data-offset="50">
             <div class="content-border">
                 <div class="header-padding"></div>
-                <div id="content-box">NOTHING works
+                <div id="content-box">
 
-                <div id="sections">
-                    <section id="home-content" class="anchor">
+                    <div id="sections">
+                        <section id="home-content" class="anchor">
 
+                            <span style="line-height: 90vh"></span>
+                            <div  style="vertical-align:middle; display:inline-block">
+                            <span style="font-family:'Petit Formal Script', cursive; font-weight: bold; font-size:35px; line-height:70%">hello stranger, how was the trip?</span><br/>
+                            <span style="font-family:Abril Fatface; font-size:40px; line-height: 50%">I hope you find what you're looking for.</span><br/><br/><br/>
 
-                        <br/><br/><br/><br/><br/>
-                        <span style="font-family:'Petit Formal Script', cursive; font-weight: bold; font-size:35px; line-height:70%">hello stranger, how was the trip?</span><br/>
-                        <span style="font-family:Abril Fatface; font-size:40px; line-height: 50%">I hope you find what you're looking for.</span><br/><br/><br/><br/><br/><br/><br/><br/>
-
-                        <button onclick="scrollToAbout();">(tell me if it's underwhelming)</button>
-                    </section>
-
-                    <section id="about-content" class="anchor">
-
-                        <p>I'm Amy!</p>
-
-                        <p>I've always wanted a nickname but unfortunately it doesn't get any shorter.</p>
-
-                        <p>In terms of CS, I'm interested in a variety of things -- still traversing that well-paved road of higher education.
-                            <br/>But I have a lot of experience in CS education and software practices. </p>
-
-                        <p> I've got grips on Java and Javascript mainly, a forgotten semester each of C and C++. And an obscure subset of Lisp called Racket.</p>
-
-                        <p> LaTeX, bash, git, R, MatLab (dubious).</p>
-
-                        <p>Whe...</p>
-
-                    </section>
-
-
-                    <section id="contact-content"class="anchor">
-                        I know reaching out first is pretty hard, but I assure you, every email is a delight. I check that thing every twenty minutes
-                        (if only to verify that my Amazon purchase has shipped).
-
-                        <div id="icons bar">
-                            <a href="https://www.linkedin.com/in/amy-zhu-54403511b/"><img height="32px" id="linkedin" src="assets/icons/linkedin.png"></a>
-                            <a href="https://www.github.com/amyjzhu"><img id="github" src="assets/icons/github.png"></a>
-
-                        </div>
-                        GitHub, Ravelry, LinkedIn, resume, email
-
-
-
-                    </section>
-
-
-
-
-
-
-
-                    <section id="hobbies-content"class="anchor">And here's the part of the website that I personally care most about: my hobbies.<br/><br/><br/><br/><br/><br/><br/><br/>
-
-                        <!-- carousel -->
-
-
-                        <div id="carouselMyStuff" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <img class="d-block img-fluid" src="assets/keeb.JPG" alt="MyKeeb">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>keeb</h3>
-                                        <p>filco majestouch 2 tkl | cherry mx blues </p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img class="d-block img-fluid" src="assets/food_party.png" alt="Second slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>food</h3>
-                                        <p>many assorted cold noodle accoutrements</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img class="d-block img-fluid" src="assets/cake.JPG" alt="Third slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>perfume</h3>
-                                        <p>red wine olive oil bundt | apple blossom </p>
-                                    </div>
-                                </div>
+                                <div style="text-align:center">
+                            <button id="landing-button" class="btn btn-outline-dark btn-large">let me know if it's underwhelming ></button></div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
+                        </section>
 
-                        <!-- carousel end-->
+                        <section id="about-content" class="anchor">
 
-                        <br><br><br>
+                            <p>I'm Amy!</p>
+
+                            <p>I've always wanted a nickname but unfortunately it doesn't get any shorter.</p>
+
+                            <p>In terms of CS, I'm interested in a variety of things -- still traversing that well-paved road of higher education.
+                                <br/>But I have a lot of experience in CS education and software practices. </p>
+
+                            <p> I've got grips on Java and Javascript mainly, a forgotten semester each of C and C++. And an obscure subset of Lisp called Racket.</p>
+
+                            <p> LaTeX, bash, git, R, MatLab (dubious).</p>
+
+                            <p>Whe...</p>
+
+                        </section>
 
 
-                    </section>
+                        <section id="contact-content"class="anchor">
+                            I know reaching out first is pretty hard, but I assure you, every email is a delight. I check that thing every twenty minutes
+                            (if only to verify that my Amazon purchase has shipped).
 
-                </div>
+                            <div id="icons bar">
+                                <a href="https://www.linkedin.com/in/amy-zhu-54403511b/"><img height="32px" id="linkedin" src="assets/icons/linkedin.png"></a>
+                                <a href="https://www.github.com/amyjzhu"><img id="github" src="assets/icons/github.png"></a>
+
+                            </div>
+                            GitHub, Ravelry, LinkedIn, resume, email
+
+
+
+                        </section>
+
+
+
+
+
+
+
+                        <section id="hobbies-content"class="anchor">And here's the part of the website that I personally care most about: my hobbies.<br/><br/>
+
+                            <!-- carousel -->
+
+
+                            <div id="carouselMyStuff" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img class="d-block img-fluid" src="assets/keeb.JPG" alt="MyKeeb">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h3>keeb</h3>
+                                            <p>filco majestouch 2 tkl | cherry mx blues </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="d-block img-fluid" src="assets/food_party.png" alt="Second slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h3>food</h3>
+                                            <p>many assorted cold noodle accoutrements</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img class="d-block img-fluid" src="assets/cake.JPG" alt="Third slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h3>perfume</h3>
+                                            <p>red wine olive oil bundt | apple blossom </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                            <!-- carousel end-->
+
+                            <br><br><br>
+
+
+                        </section>
+
+                    </div>
 
 
 
@@ -254,10 +268,10 @@
 
     <div id="moving-pices">
 
-    <img class="background-piece move" id="cliff" src="./assets/background/cliff.png"/>
-    <img class="background-piece" id="pool" src="./assets/background/pool.png"/>
-    <img class="background-piece move" id="hill" src="./assets/background/hill.png"/>
-    <img class="background-piece" id="clouds" src="./assets/background/clouds.png"/>
+        <img class="background-piece move" id="cliff" src="./assets/background/cliff.png"/>
+        <img class="background-piece" id="pool" src="./assets/background/pool.png"/>
+        <img class="background-piece move" id="hill" src="./assets/background/hill.png"/>
+        <img class="background-piece" id="clouds" src="./assets/background/clouds.png"/>
 
     </div>
 
