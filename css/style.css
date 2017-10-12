@@ -163,6 +163,14 @@ h2 {
     font-weight:bold;
 }
 
+#icons-wrapper {
+    text-align:center;
+}
+
+.icon-empty-space {
+    width:5%;
+}
+
 #nav-menu {
     position:fixed;
 
