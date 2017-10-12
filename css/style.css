@@ -152,6 +152,9 @@ table.fixed { table-layout:fixed;
     text-align: center;
 }
 
+h2 {
+    font-family: Space Mono;
+}
 
 #nav-menu {
     position:fixed;
