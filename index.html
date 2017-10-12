@@ -107,7 +107,7 @@
 
 
 
-<nav id="nav-menu" class="navbar navbar-toggleable-md navbar-static-top"> <!--fixed-top-->
+<nav id="nav-menu" class="navbar  navbar-static-top"> <!--fixed-top-->
     <div class="container navbar-inner">
         <!-- <nav class="navbar navbar-default navbar-inner">
              <div class="container-fluid"> -->
@@ -308,64 +308,80 @@
                                                         </div> -->
 
                             <!-- grid end-->
-<br>
+
 
                             <div class="container" id="hobbies-grid">
-                                <div class="row">
-                                    <div class=".col-6 .col-md-4">
-                                        <div class="hobbies-grid" id="reading">
-                                            <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-reading-content"
-                                                 aria-expanded="false" aria-controls="hobbies-reading-content">Reading</div>
-                                            <div class="panel-body collapse" id="hobbies-reading-content">I've loved:
-                                            <ul>
-                                                <li>Leo Tolstoy: War and Peace, Anna Karenina, Kreutzer Sonata</li>
-                                                <li>Italo Calvino: On a Winter's Night a Traveller</li>
-                                                <li>Zadie Smith: On Beauty</li>
-                                                <li>Haruki Murakami: Norwegian Wood, 1Q84, Sputnik Sweethearts</li>
-                                                <li>Kazuo Ishiguro: A Pale View of Hills, Never Let Me Go</li>
-                                            </ul>
-                                            I'm reading:
-                                            <ul>
-                                                <li>Marcel Proust: In Search of Lost Time</li>
-                                                <li>Clean Code</li>
-                                            </ul>
-                                            Next:
-                                                <ul>
-                                                    <li>Ivan Goncharov: Oblomov</li>
-                                                    <li>Vladimir Nabokov: Pale Fire</li>
-                                                </ul>
+                                <table style="width:85%" class="fixed">
+                                    <col width="42.5%" class="relative-col"><col width="42.5%" class="relative-col"> <!-- resize in javascript wrt floater-box-->
+                                    <tr>
+                                        <td>
+                                            <div class=".col-6 .col-md-4">
+                                                <div class="panel panel-info hobbies-grid" id="reading">
+                                                    <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-reading-content"
+                                                         aria-expanded="false" aria-controls="hobbies-reading-content">Reading</div>
+                                                    <div class="panel-body collapse" id="hobbies-reading-content">I've loved:
+                                                        <ul>
+                                                            <li>Leo Tolstoy: War and Peace, Anna Karenina, Kreutzer Sonata</li>
+                                                            <li>Italo Calvino: On a Winter's Night a Traveller</li>
+                                                            <li>Zadie Smith: On Beauty</li>
+                                                            <li>Haruki Murakami: Norwegian Wood, 1Q84, Sputnik Sweethearts</li>
+                                                            <li>Kazuo Ishiguro: A Pale View of Hills, Never Let Me Go</li>
+                                                        </ul>
+                                                        I'm reading:
+                                                        <ul>
+                                                            <li>Marcel Proust: In Search of Lost Time</li>
+                                                            <li>Clean Code</li>
+                                                        </ul>
+                                                        Next:
+                                                        <ul>
+                                                            <li>Ivan Goncharov: Oblomov</li>
+                                                            <li>Vladimir Nabokov: Pale Fire</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </td>
 
-                                    <div class=".col-6 .col-md-4">
-                                        <div class="hobbies-grid" id="baking">
-                                            <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-baking-content"
-                                                 aria-expanded="false" aria-controls="hobbies-baking-content">Baking</div>
-                                            <div class="panel-body collapse" id="hobbies-baking-content">idea: black sesame sable cookies with bitter matcha white chocolate chunks<br>
-                                                For more ideas check this <a href="https://www.pinterest.ca/randomthingshi/cakes-n-shit/">pinterest cake board</a> I have</div>
-                                        </div>
-                                    </div>
+                                        <td>
+                                            <div class=".col-6 .col-md-4">
+                                                <div class="panel panel-info hobbies-grid" id="baking">
+                                                    <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-baking-content"
+                                                         aria-expanded="false" aria-controls="hobbies-baking-content">Baking</div>
+                                                    <div class="panel-body collapse" id="hobbies-baking-content">
+                                                        vertical black sesame cake with matcha whipped cream<br>
+                                                        orangeflower  madeleines<br>
+                                                        juniper and lavender meringues<br>
+                                                        idea: black sesame sable cookies with bitter matcha white chocolate chunks<br>
+                                                        For more ideas check this <a href="https://www.pinterest.ca/randomthingshi/cakes-n-shit/">pinterest cake board</a> I have</div>
+                                                </div>
+                                            </div>
+                                        </td>
 
-                                    <div class=".col-6 .col-md-4">
-                                        <div class="hobbies-grid" id="drawing">
-                                            <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-drawing-content"
-                                                 aria-expanded="false" aria-controls="hobbies-drawing-content">Drawing</div>
-                                            <div class="panel-body collapse" id="hobbies-drawing-content">Panel Content</div>
-                                        </div>
-                                    </div>
+                                    </tr>
 
-                                    <div class=".col-6 .col-md-4">
-                                        <div class="hobbies-grid" id="typing">
-                                            <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-typing-content"
-                                                 aria-expanded="false" aria-controls="hobbies-typing-content">Typing</div>
-                                            <div class="panel-body collapse" id="hobbies-typing-content">Right now I'm using a Filco Majestouch 2, tenkeyless, with Cherry MX blues and aftermarket
-                                            pastel PBT keycaps.<br>
-                                            (If anyone is selling a 60, 65, or 70% keyboard with clears, hit me up!) </div>
-                                        </div>
-                                    </div>
+                                    <tr>
+                                        <td>
+                                            <div class=".col-6 .col-md-4">
+                                                <div class="panel panel-info hobbies-grid" id="drawing">
+                                                    <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-drawing-content"
+                                                         aria-expanded="false" aria-controls="hobbies-drawing-content">Drawing</div>
+                                                    <div class="panel-body collapse" id="hobbies-drawing-content">Panel Content</div>
+                                                </div>
+                                            </div>
+                                        </td>
 
-                                </div>
+                                        <td><div class=".col-6 .col-md-4">
+                                            <div class="panel panel-info hobbies-grid" id="typing">
+                                                <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-typing-content"
+                                                     aria-expanded="false" aria-controls="hobbies-typing-content">Typing</div>
+                                                <div class="panel-body collapse" id="hobbies-typing-content">Right now I'm using a Filco Majestouch 2, tenkeyless, with Cherry MX blues and aftermarket
+                                                    pastel PBT keycaps.<br>
+                                                    (If anyone is selling a 60, 65, or 70% keyboard with clears, hit me up!) </div>
+                                            </div>
+                                        </div></td>
+                                    </tr>
+
+                                </table>
 
                             </div>
 

@@ -132,10 +132,21 @@ table ul li {
     display:block;
 }
 
+table  td, table td *  {
+    vertical-align: top;
+}
+
+table.fixed { table-layout:fixed;
+}
+
 .navbar {
     text-align: center;
 }
 
+.relative-col {
+    position:relative;
+    max-width:42.5%
+}
 
 .navbar .navbar-collapse {
     text-align: center;
@@ -163,9 +174,11 @@ tr.spaceUnder>td {
 
 #hobbies-grid {
     position:relative;
+    display:block;
 }
 
 .hobbies-grid {
+    max-width:100%;
 
 }
 
