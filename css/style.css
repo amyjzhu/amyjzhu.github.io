@@ -156,6 +156,13 @@ h2 {
     font-family: Space Mono;
 }
 
+.padding-cell {
+}
+
+.table-header {
+    font-weight:bold;
+}
+
 #nav-menu {
     position:fixed;
 
