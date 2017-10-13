@@ -10,6 +10,8 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
@@ -85,19 +87,30 @@
 
         function assignScrollHandlers() {
 
-            $("#landing-button").click(() => { scrollTo( "about-content") });
-            $("#home").click(() => {scrollTo("home-content")});
-            $("#about").click(() => { scrollTo("about-content")});
-            $("#hobbies").click(() => { scrollTo("hobbies-content")});
-            $("#contact").click(() => { scrollTo("contact-content") });
+            $("#landing-button").click((e) => {
+                scrollTo( "about-content", "#landing-button", e)});
+            $("#home").click((e) => {
+            scrollTo("home-content", "#home", e)});
+            $("#about").click((e) => {
+                scrollTo("about-content", "#about", e)});
+            $("#hobbies").click((e) => {
+                scrollTo("hobbies-content", "#hobbies", e);});
+            $("#contact").click((e) => {
+                scrollTo("contact-content", "#contact", e)});
+
         }
 
 
-        function scrollTo(item) {
+
+        function scrollTo(item, original, e) {
+            e.preventDefault();
+
             var topPos = document.getElementById(item).offsetTop;
             $("#floater-box").animate({
                 scrollTop: topPos-10
-            }, 800);
+            }, 800, function () {
+                $(":focus").blur();
+            });
         }
 
         function associateScroll() {
