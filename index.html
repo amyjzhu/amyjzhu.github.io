@@ -79,6 +79,8 @@
 
             assignScrollHandlers();
 
+            associateScroll();
+
         });
 
         function assignScrollHandlers() {
@@ -98,6 +100,13 @@
             }, 800);
         }
 
+        function associateScroll() {
+            $("html, body").scroll( function() {
+                $("#content-box").scroll();
+                }
+            )
+        }
+
 
 
     </script>
@@ -107,13 +116,10 @@
 
 
 
-<nav id="nav-menu" class="navbar  navbar-static-top"> <!--fixed-top-->
-    <div class="container navbar-inner">
+<nav id="nav-menu" class="navbar  navbar-fixed-top"> <!--fixed-top-->
+    <div class="container navbar-inner" style="text-align;center;">
         <!-- <nav class="navbar navbar-default navbar-inner">
              <div class="container-fluid"> -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">me</a>
-        </div>
         <ul class="nav nav-pills" data-toggle="tabs">
             <li id="home" class="active"><a href="#home-content">Home</a></li>
             <li id="about"><a href="#about-content">About</a></li>
@@ -147,7 +153,7 @@
                                 <span style="font-size:40px; line-height: 60%; font-weight:bold">Hopefully you find what you're looking for.</span><br/><br/><br/>
 
                                 <div style="text-align:center">
-                                    <button id="landing-button" class="btn btn-outline-dark btn-large">let me know if it's uninspired ></button></div>
+                                    <button id="landing-button" class="btn btn-outline-dark btn-large">$ find $HOME -user amy</button></div>
                             </div>
                         </section>
 

@@ -33,8 +33,8 @@ body {
 .anchor:before {
     display: block;
     content: " ";
-    margin-top: -75px;
-    height: 75px;
+    margin-top: -40px;
+    height: 40px;
     visibility: hidden;
 }
 
@@ -99,7 +99,7 @@ body {
 
 
 section {
-    min-height: 110vh;
+    min-height: 120vh;
 }
 
 
@@ -139,9 +139,6 @@ table  td, table td *  {
 table.fixed { table-layout:fixed;
 }
 
-.navbar {
-    text-align: center;
-}
 
 .relative-col {
     position:relative;
@@ -150,6 +147,9 @@ table.fixed { table-layout:fixed;
 
 .navbar .navbar-collapse {
     text-align: center;
+    float:none;
+    display:inline-block;
+    vertical-align: top;
 }
 
 h2 {
@@ -173,7 +173,13 @@ h2 {
 
 #nav-menu {
     position:fixed;
-
+    width: 100%;
+    margin: 0 0 1em 0;
+    padding: 0;
+    background-color: #fbddf8;
+    text-align: center;
+    opacity:0.65;
+    display:inline-block;
 }
 
 #carouselMyStuff {
