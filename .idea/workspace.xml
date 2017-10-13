@@ -4,7 +4,6 @@
     <list default="true" id="6dcf5b0c-d564-4ce0-abbf-e796cf451406" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,8 +75,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="178" column="30" lean-forward="false" selection-start-line="178" selection-start-column="30" selection-end-line="178" selection-end-column="30" />
+            <state relative-caret-position="1166">
+              <caret line="180" column="16" lean-forward="false" selection-start-line="180" selection-start-column="16" selection-end-line="180" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -326,12 +325,12 @@
       <workItem from="1507568752336" duration="15365000" />
       <workItem from="1507700914628" duration="2902000" />
       <workItem from="1507774155662" duration="7248000" />
-      <workItem from="1507859879115" duration="2565000" />
+      <workItem from="1507859879115" duration="3259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122622000" />
+    <option name="totallyTimeSpent" value="123316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3224" height="1754" extended-state="6" />
@@ -732,8 +731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="178" column="30" lean-forward="false" selection-start-line="178" selection-start-column="30" selection-end-line="178" selection-end-column="30" />
+        <state relative-caret-position="1166">
+          <caret line="180" column="16" lean-forward="false" selection-start-line="180" selection-start-column="16" selection-end-line="180" selection-end-column="16" />
           <folding />
         </state>
       </provider>
