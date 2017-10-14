@@ -83,7 +83,20 @@
 
             associateScroll();
 
+            associateCarouselPress();
+
         });
+
+        function associateCarouselPress() {
+            $(document).bind('keyup', function(e) {
+                if(e.which == 39){
+                    $('#carouselMyStuff').carousel('next');
+                }
+                else if(e.which == 37){
+                    $('#carouselMyStuff').carousel('prev');
+                }
+            });
+        }
 
         function assignScrollHandlers() {
 
