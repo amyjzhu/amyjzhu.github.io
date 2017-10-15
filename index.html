@@ -81,8 +81,6 @@
 
             assignScrollHandlers();
 
-            associateScroll();
-
             associateCarouselPress();
 
         });
@@ -103,7 +101,7 @@
             $("#landing-button").click((e) => {
                 scrollTo( "about-content", "#landing-button", e)});
             $("#home").click((e) => {
-            scrollTo("home-content", "#home", e)});
+                scrollTo("home-content", "#home", e)});
             $("#about").click((e) => {
                 scrollTo("about-content", "#about", e)});
             $("#hobbies").click((e) => {
@@ -124,13 +122,6 @@
             }, 800, function () {
                 $(":focus").blur();
             });
-        }
-
-        function associateScroll() {
-            $("html, body").scroll( function() {
-                $("#content-box").scroll();
-                }
-            )
         }
 
 
@@ -186,15 +177,22 @@
 
                             <p><h2>$ cat about</h2></p>
 
-                            <p>Hey, I'm Amy.<br>
-                                <span style="font-size:10px; line-height:70%">I've always wanted a nickname but unfortunately it doesn't get any shorter.</span></p>
+                            <table><tbody><tr>
+                                <td>
+                                    <p>Hey, I'm Amy.<br>
+                                        <span style="font-size:10px; line-height:70%">I've always wanted a nickname but unfortunately it doesn't get any shorter.</span></p>
 
-                            <p>In terms of CS, I'm interested in a variety of things; I'm still traversing that well-paved road of higher education.
-                                <br/>But I have a lot of experience in CS education and software practices, and I'm particularly interested in information security. </p>
+                                    <p>In terms of CS, I'm interested in a variety of things; I'm still traversing that well-paved road of higher education.
+                                        <br/>But I have a lot of experience in CS education and software practices, and I'm particularly interested in information security. </p>
 
-                            <p> I've got grips on Java and Javascript mainly, a forgotten semester each of C and C++. And an obscure subset of Lisp called Racket.</p>
+                                    <p> I've got grips on Java and Javascript mainly, a forgotten semester each of C and C++. And an obscure subset of Lisp called Racket.</p>
 
-                            <p> Also LaTeX, bash, git, R, MatLab (dubious).</p>
+                                    <p> Also LaTeX, bash, git, R, MatLab (dubious).</p>
+                                </td>
+                                <td width="300px" style="text-align: center;">
+                                    <a href="https://www.facebook.com/UBCECESS/photos/a.1484851431604669.1073741887.359994484090375/1484852468271232">
+                                        <img width="200px" src="assets/me.jpg" class="img-circle" alt="a really great pic of me smiling faintly wearing black"></a></td>
+                            </tr></tbody></table>
 
                             <br><br>
                             <p><h2>$ jobs</h2></p>
@@ -269,7 +267,7 @@
 
 
                         <section id="contact-content"class="anchor">
-                            <span style="line-height: 80vh"></span>
+                            <span style="line-height: 90vh"></span>
                             <div  style="vertical-align:middle; display:inline-block">
                                 <h2>$ ping amy.zhu</h2>
                                 I know reaching out first is pretty hard, but I assure you, every email is a delight. I check that thing every twenty minutes
@@ -373,9 +371,11 @@
                             <br><br>
                             <div class="container" id="hobbies-grid">
                                 <table style="width:85%" class="fixed">
-                                    <col width="42.5%" class="relative-col"><col width="42.5%" class="relative-col"> <!-- resize in javascript wrt floater-box-->
+                                    <col width="14.16%" class="relative-col"><col width="14.16%" class="relative-col">
+                                    <col width="14.16%" class="relative-col"><col width="14.16%" class="relative-col">
+                                    <col width="14.16%" class="relative-col"><col width="14.16%" class="relative-col"><!-- resize in javascript wrt floater-box-->
                                     <tr>
-                                        <td>
+                                        <td colspan="3">
                                             <div class=".col-6 .col-md-4">
                                                 <div class="panel panel-info hobbies-grid" id="reading">
                                                     <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-reading-content"
@@ -403,7 +403,7 @@
                                             </div>
                                         </td>
 
-                                        <td>
+                                        <td colspan="3">
                                             <div class=".col-6 .col-md-4">
                                                 <div class="panel panel-info hobbies-grid" id="baking">
                                                     <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-baking-content"
@@ -421,17 +421,19 @@
                                     </tr>
 
                                     <tr>
-                                        <td>
+                                        <td colspan="2">
                                             <div class=".col-6 .col-md-4">
                                                 <div class="panel panel-info hobbies-grid" id="drawing">
                                                     <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-drawing-content"
                                                          aria-expanded="false" aria-controls="hobbies-drawing-content">Drawing</div>
-                                                    <div class="panel-body collapse" id="hobbies-drawing-content">Panel Content</div>
+                                                    <div class="panel-body collapse" id="hobbies-drawing-content">I like paper and pencil, or oil paints. <br>
+                                                        If you're really interested for some reason, here's my <a href="https://gijinkaglaceon.deviantart.com/">deviantArt</a>... at your own risk.</div>
                                                 </div>
                                             </div>
                                         </td>
 
-                                        <td><div class=".col-6 .col-md-4">
+                                        <td colspan="2">
+                                        <div class=".col-6 .col-md-4">
                                             <div class="panel panel-info hobbies-grid" id="typing">
                                                 <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-typing-content"
                                                      aria-expanded="false" aria-controls="hobbies-typing-content">Typing</div>
@@ -440,6 +442,19 @@
                                                     (If anyone is selling a 60, 65, or 70% keyboard with clears, hit me up!) </div>
                                             </div>
                                         </div></td>
+
+                                        <td colspan="2">
+                                            <div class=".col-6 .col-md-4">
+                                                <div class="panel panel-info hobbies-grid" id="knitting">
+                                                    <div class="panel-heading" data-toggle="collapse" data-target="#hobbies-knitting-content"
+                                                         aria-expanded="false" aria-controls="hobbies-knitting-content">Knitting</div>
+                                                    <div class="panel-body collapse" id="hobbies-knitting-content">I like small projects, scarves, and dpns.
+                                                    PLEASE, please, let's talk about knitting; I love knitting.
+                                                        <a href="https://www.ravelry.com/people/GijinkaGlaceon">Here's my Ravelry!</a></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td></td>
                                     </tr>
 
                                 </table>

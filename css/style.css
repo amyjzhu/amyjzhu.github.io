@@ -128,7 +128,7 @@ table.fixed { table-layout:fixed;
 
 .relative-col {
     position:relative;
-    max-width:42.5%
+    max-width:14.16%
 }
 
 .navbar .nav > li > a {
@@ -187,6 +187,10 @@ h2 {
 
 .carousel-img {
     opacity: 1;
+}
+
+.img-circle {
+    border-radius: 50%;
 }
 
 tr.spaceUnder>td {
