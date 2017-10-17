@@ -83,6 +83,8 @@
 
             associateCarouselPress();
 
+            addAppleGray();
+
         });
 
         function associateCarouselPress() {
@@ -124,6 +126,19 @@
             });
         }
 
+        function addAppleGray() {
+            $("#apple-gray").click(function () {
+                    $("body").css(
+                        {
+                            "height": "100vh",
+                            "background-color": "#a5adb0",
+                            "z-index":"100",
+                            "background-image":"none"
+                        })
+                }
+                )
+        }
+
 
 
     </script>
@@ -140,6 +155,7 @@
         <li id="about"><a href="#about-content">About</a></li>
         <li id="contact"><a href="#contact-content">Contact</a></li>
         <li id="hobbies"><a href="#hobbies-content" class="anchor">Interests</a></li> <!--disable defaults if scrolling to preserve spy?-->
+        <li id="apple-gray" onclick="addAppleGray();"><a href="#">james</a>/</li>
     </ul>
     <!--</div>
 </nav>-->
