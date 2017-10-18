@@ -213,3 +213,7 @@ tr.spaceUnder>td {
     right:15%;
     font-size:20px;
 }
+
+.row, .panel {
+    padding-bottom:0px;
+}
