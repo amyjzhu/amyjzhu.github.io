@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <title>ssh guest@amyzhu</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
@@ -538,20 +536,20 @@
 <br><br><br>
 
                             <div class="row">
-                                <div class="col-md-8 offset-md-3">
+                                <div class="col-md-9 offset-md-2">
 			<div class="btn-group dropright">
-			  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			    Let me tell you about... <span id="replace-name"></span>
 			  </button>
-			  <div class="dropdown-menu">
-			    <a class="dropdown-item" data-target="hobbies-reading-content">books I like</a><br>
-    			    <a class="dropdown-item" data-target="hobbies-typing-content">keyboards I use</a><br>
-			    <a class="dropdown-item" data-target="hobbies-drawing-content">how I draw</a><br>
-			    <a class="dropdown-item" data-target="hobbies-baking-content">things I bake</a><br>
-			    <a class="dropdown-item" data-target="hobbies-knitting-content">projects I knit</a><br>
-			  </div>
+			  <ul class="dropdown-menu">
+			    <li><a class="dropdown-item" data-target="hobbies-reading-content">books I like</a></li>
+    			    <li><a class="dropdown-item" data-target="hobbies-typing-content">keyboards I use</a></li>
+			    <li><a class="dropdown-item" data-target="hobbies-drawing-content">how I draw</a></li>
+			    <li><a class="dropdown-item" data-target="hobbies-baking-content">things I bake</a></li>
+			    <li><a class="dropdown-item" data-target="hobbies-knitting-content">projects I knit</a></li>
+			  </ul>
 			</div>
-				<div class="panel panel-info" id="hobbies-replace">
+				<div class="panel panel-body" id="hobbies-replace" style="border:0;box-shadow:none;">
 				</div>
 				</div>
 			</div>
