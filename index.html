@@ -82,6 +82,8 @@
             assignScrollHandlers();
 
             associateCarouselPress();
+	
+            assignDropDown();
 
             addAppleGray();
 
@@ -141,6 +143,19 @@
         }
 
 
+	function assignDropDown() {
+	    $(".dropdown-menu .dropdown-item").click((e) => {
+		$("#hobbies-replace").hide();
+		var element = $(event.target);
+	        var idToGet = element.data("target");
+		var textSelected = element.text();
+		$("#replace-name").html(textSelected);
+
+		var textToReplace = $("#" + idToGet).html();
+	        $("#hobbies-replace").html(textToReplace);
+		$("#hobbies-replace").fadeIn("slow");
+	    });
+	}
 
     </script>
 
@@ -522,7 +537,27 @@
 
 <br><br><br>
 
+                            <div class="row">
+                                <div class="col-md-8 offset-md-3">
+			<div class="btn-group dropright">
+			  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Let me tell you about... <span id="replace-name"></span>
+			  </button>
+			  <div class="dropdown-menu">
+			    <a class="dropdown-item" data-target="hobbies-reading-content">books I like</a><br>
+    			    <a class="dropdown-item" data-target="hobbies-typing-content">keyboards I use</a><br>
+			    <a class="dropdown-item" data-target="hobbies-drawing-content">how I draw</a><br>
+			    <a class="dropdown-item" data-target="hobbies-baking-content">things I bake</a><br>
+			    <a class="dropdown-item" data-target="hobbies-knitting-content">projects I knit</a><br>
+			  </div>
+			</div>
+				<div class="panel panel-info" id="hobbies-replace">
+				</div>
+				</div>
+			</div>
+
                             <!--- YOU MUST REFACTOR THIS TO USE CLASSES AND PREFERABLY GENERATE DYNAMICALLY TODO-->
+<div style="display:none;"> <!-- this is a very bad and lazy way of getting rid of this-->
                             <div class="row">
                                 <div class="col-md-6" style="padding-right:0px;">
                             <div class="panel panel-info hobbies-grid" id="reading">
@@ -600,9 +635,9 @@
                                             <a href="https://www.ravelry.com/people/GijinkaGlaceon">Here's my Ravelry!</a></div>
                                     </div>
                                 </div>
-                                <!--- dynamically generate all these maybe! -->
-
+                                
                             </div>
+</div>
 
                             <br><br><br>
 
