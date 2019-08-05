@@ -1,0 +1,35 @@
+♈ Aries (21/3 - 20/4) - Dynamic array. 
+Accessing its elements is direct and fast, which is perfect for an impatient spirit. But still, it doesn't like to be constrained and is always ready to act. You will appreciate how the dynamic array is energetic and assertive.
+
+♉ Taurus (21/4 - 21/5) - Immutable list. 
+This functional data structure is unyielding, but stable and dependable. You'll never get a race condition or other unpredictable behaviour. The immutable list is down-to-earth and routine: when you enter into a contract with one, you always know that you'll be getting a fresh copy in return. 
+
+♊ Gemini (21/5 - 21/6) - Bloom filter. 
+Unreliable, but quick. It reflects perfectly how you are adaptable, restless. Like you, it promises a lot, but doesn't always follow through. The bloom filter is cleverly implemented, and will always keep you on your feet. 
+
+♋ Cancer (22/6 - 22/7) - Circular buffer. 
+Secure, fixed-size, but moody and mercurial. Lucky for you, there is no unpredictable structural change, no shuffling. You'll find comfort in the fact that a circular buffer always returns home. It takes on a motherly figure -- protective, with complete ownership of all its elements. 
+
+♌ Leo (23/7 - 22/8) - Judy array. 
+Hell, it's named after a person. You'll resonate with this array, which is hugely ambitious and accomplishes a lot. It's blazingly fast and incredibly scalable, but very complicated, demanding, and rigid (64-byte cache lines only). 
+
+♍ Virgo (23/8 - 23/9) - Hashmap. 
+Classic beauty. Everything is neatly organized and the rules for keeping elements are clear and direct. Thorough and efficient, but exacting. The hashmap will satisfy your desire for focused, logical data storage.
+
+♎ Libra (24/9 - 23/10) - Red-black tree. 
+i.e. a self-balancing binary search tree. Always searching for balance, and to right the scales for the benefit of others. It acts in measured ways. Like you, its operations are harmonious, sophisticated, open, and easy-going. 
+
+♏ Scorpio (24/10 - 22/11) - Directed cyclic graph. 
+This graph is directed and intense, complex. Sometimes, it can be difficult to traverse and difficult to deal with. If you're not careful, you'll find yourself going in circles. And yet, it is powerful and enigmatic. Sound familiar?
+
+♐ Sagittarius (23/11 - 21/12) - Skip list. 
+You share many things in common with this efficient data structure. Adventurous and always forging forth, with impulsive and nondeterministic insertion. Oftentimes, when implemented carelessly, it can be indulgent in terms of space. You may find yourself always one step ahead, just like the skip list. 
+
+♑ Capricorn (22/12 - 20/1) - Stack.
+The stack represents the traditional, the foundation that big things are built on. Every operation on it is well-defined; just like you, it is practical, responsible, and stable. Where would computing be without the quintessential stack?
+
+♒ Aquarius (21/1 - 19/2)- Log-structured merge tree. 
+You're a big dreamer with innovative ideas and you love to work on big projects. You're unconventional and impulsive, which jives perfectly with how the LSM tree solves the task of hugely scalable log writes.
+
+♓ Pisces (20/2 - 20/3) - Skew heap. 
+Stay openminded. The skew heap captures your air of mystery -- it should not work, but it does. It has only two quixotic, simple invariants. Its implementation is beautiful and elegant in practice -- in fact, its amortized complexity involves the golden ratio. Dreamy, mysterious, romantic, spiritual.
